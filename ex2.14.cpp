@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int soma_digitos(int n) {
+    if (n < 10) {
+        return n;
+    } 
+    else
+        return n % 10 + soma_digitos(n / 10);
+}
+
+int main() {
+    int num;
+    printf("digite o numero: ");
+    scanf("%d", &num);
+    int result = soma_digitos(num);
+    printf(" a soma dos digitos do numero é %d", result);
+}
